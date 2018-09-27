@@ -1,0 +1,495 @@
+<html lang="pt_br">
+<head>
+ <!-- Theme Made By www.w3schools.com - No Copyright -->
+ <title>Norteando, simplesmente eficaz.</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+ <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+   body {
+     font: 400 15px Lato, sans-serif;
+     line-height: 1.8;
+     color: #818181;
+   }
+   h2 {
+     font-size: 24px;
+     text-transform: uppercase;
+     color: #303030;
+     font-weight: 600;
+     margin-bottom: 30px;
+   }
+   h4 {
+     font-size: 19px;
+     line-height: 1.375em;
+     color: #303030;
+     font-weight: 400;
+     margin-bottom: 30px;
+   }
+   .jumbotron {
+     background-color: #131f31;
+     color: #fff;
+     padding: 100px 25px;
+     font-family: Montserrat, sans-serif;
+   }
+   .container-fluid {
+     padding: 60px 50px;
+   }
+   .bg-grey {
+     background-color: #f6f6f6;
+   }
+   .logo-small {
+     color: #131f31;
+     font-size: 50px;
+   }
+   .logo {
+     color: #131f31;
+     font-size: 200px;
+   }
+   .thumbnail {
+     padding: 0 0 15px 0;
+     border: none;
+     border-radius: 0;
+   }
+   .thumbnail img {
+     width: 100%;
+     height: 60%;
+     margin-bottom: 5px;
+   }
+   .carousel-control.right, .carousel-control.left {
+     background-image: none;
+     color: #131f31;
+   }
+   .carousel-indicators li {
+     border-color: #131f31;
+   }
+   .carousel-indicators li.active {
+     background-color: #131f31;
+   }
+   .item h4 {
+     font-size: 19px;
+     line-height: 1.375em;
+     font-weight: 400;
+     font-style: italic;
+     margin: 70px 0;
+   }
+   .item span {
+     font-style: normal;
+   }
+   .panel {
+     border: 1px solid #131f31;
+     border-radius:0 !important;
+     transition: box-shadow 0.5s;
+   }
+   .panel:hover {
+     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+   }
+   .panel-footer .btn:hover {
+     border: 1px solid #131f31;
+     background-color: #fff !important;
+     color: #131f31;
+   }
+   .panel-heading {
+     color: #fff !important;
+     background-color: #131f31 !important;
+     padding: 25px;
+     border-bottom: 1px solid transparent;
+     border-top-left-radius: 0px;
+     border-top-right-radius: 0px;
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+   }
+   .panel-footer {
+     background-color: white !important;
+   }
+   .panel-footer h3 {
+     font-size: 32px;
+   }
+   .panel-footer h4 {
+     color: #aaa;
+     font-size: 14px;
+   }
+   .panel-footer .btn {
+     margin: 15px 0;
+     background-color: #131f31;
+     color: #fff;
+   }
+   .navbar {
+     margin-bottom: 0;
+     background-color: #131f31;
+     z-index: 9999;
+     border: 0;
+     font-size: 12px !important;
+     line-height: 1.42857143 !important;
+     letter-spacing: 4px;
+     border-radius: 0;
+     font-family: Montserrat, sans-serif;
+   }
+   .navbar li a, .navbar .navbar-brand {
+     color: #fff !important;
+     background-color: #000000 !important;
+   }
+   .navbar-nav li a:hover, .navbar-nav li.active a {
+     color: #000000 !important;
+     background-color: #fff !important;
+   }
+   .navbar-default .navbar-toggle {
+     border-color: transparent;
+     color: #fff !important;
+   }
+   footer .glyphicon {
+     font-size: 20px;
+     margin-bottom: 20px;
+     color: #131f31;
+   }
+   .slideanim {visibility:hidden;}
+   .slide {
+     animation-name: slide;
+     -webkit-animation-name: slide;
+     animation-duration: 1s;
+     -webkit-animation-duration: 1s;
+     visibility: visible;
+   }
+   @keyframes slide {
+     0% {
+       opacity: 0;
+       transform: translateY(70%);
+     }
+     100% {
+       opacity: 1;
+       transform: translateY(0%);
+     }
+   }
+   @-webkit-keyframes slide {
+     0% {
+       opacity: 0;
+       -webkit-transform: translateY(70%);
+     }
+     100% {
+       opacity: 1;
+       -webkit-transform: translateY(0%);
+     }
+   }
+   @media screen and (max-width: 768px) {
+     .col-sm-4 {
+       text-align: center;
+       margin: 25px 0;
+     }
+     .btn-lg {
+       width: 100%;
+       margin-bottom: 35px;
+     }
+   }
+   @media screen and (max-width: 480px) {
+     .logo {
+       font-size: 150px;
+     }
+   }
+ </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+ <nav class="navbar navbar-default navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>                     
+       </button>
+       <a class="navbar-brand" href="#myPage">Norteando</a>
+     </div>
+     <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav navbar-right">
+         <li><a href="#about1">Quem somos?</a></li>
+         <li><a href="#services1">Serviços</a></li>
+         <li><a href="#portfolio1">Equipe</a></li>
+         <li><a href="#pricing1">Licença</a></li>
+         <li><a href="#contact1">Fale conosco</a></li>
+         <li><a href="login.html?op=assine">Login</a></li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+ <div class="jumbotron text-center">
+   <h1><b>Norteando</b></h1>
+   <p><i>Simplesmente eficaz!</i></p>
+   <p>Gerencie contratos de passageiros</p>
+   <a href="#pricing1"><button type="button" class="btn btn-danger">Assine já!</button></a>
+ </div>
+
+ <!-- Container (About Section) -->
+ <div id="about1" class="container-fluid">
+   <div class="row">
+     <div class="col-sm-8">
+       <h2>Quem somos? </h2><br>
+       <h4>A Startup Norteando é fruto de uma ideia germinada que visa favorecer a gestão de contratos de empresas que atuam no ramo de transporte fixo de passageiros.</h4><br>
+       <p align="justify">O sistema surgiu no interior do Estado de Rondônia, município de Cacoal, onde os idealizadores observaram que, devido à existência de muitos alunos que contratam a mesma empresa para fazer o transporte, o processo de gerenciamento destes contratos era rudimentar e, por consequência, pouco seguro, diga-se de passagem.</p>
+       <p align="justify">Sabe quando você está à mercê de uma encruzilhada, ante caminhos a serem seguidos, mas que não resguardam eficiência na tomada de decisões, na gestão de contratos? O Norteando, assim como muitas startups, raiou sob a ideação; emergiu nos pensamentos e surtiu efeito às necessidades de mercado.</p>
+       <p align="justify">Foi lançado o desafio de mercado pelos docentes do Instituto Federal de Rondônia a seus alunos: a ideação de algo que fosse viável à comunidade, ao mercado consumidor. Motivados pela situação que fora presenciada diariamente, junto a proposta de seus tutores, os então jovens empreendedores Pedro Albuquerque, Janismar Junior e Willyan Rodrigues resolvem desenvolver o Norteando, uma plataforma que subsidia a donos de empresas de transporte de passageiros o gerenciamento de seus contratos com seus clientes, proporcionando a este conforto, segurança e eficácia.</p>
+       <p align="justify"><strong>MISSÃO:</strong> impactar de maneira positiva o mercado de transporte de passageiros fixos, em específico a gestão dos contratos, fazendo dos nossos clientes verdadeiros amigos.</p>
+       <p align="justify"><strong>VISÃO:</strong> obter reconhecimento na segmentação em Cacoal e região, para que sucessivamente haja uma expansão no Estado de Rondônia.</p>
+       <p align="justify"><strong>VALORES:</strong> possibilitar às empresas de transporte uma atuação e concorrência sadias, pautadas em questões éticas e morais; de forma que seus clientes obtenham benefícios.</p>
+       <br><a href="#contact1"><button class="btn btn-default btn-lg">Contate-nos</button></a>
+     </div>
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-signal logo"></span>
+     </div>
+   </div>
+ </div>
+
+ <div class="container-fluid bg-grey">
+   <div class="row">
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-globe logo slideanAim"></span>
+     </div>
+     <div class="col-sm-8">
+       <h2>Por que usar o norteando?</h2><br>
+       <h4>Opta-se pelo Norteando pois, além de ser simples e eficaz, é o único sistema disponível no mercado que é especializado em gestão de contratos de passageiros.</h4><br>
+       <p>Somente nesta plataforma o cadastro é realizado pelos próprios passageiros, trazendo comodidade ao gestor.</p>
+       <p>É possível que o passageiro visualize seus pagamentos! Com isso, a empresa obtém maior controle de seu financeiro.</p>
+       <p>O sistema também se destaca por haver uma flexibilidade na contratação, não deixando-a engessada/rudimentar.</p>
+       <p>Estas e outras vantagens você só encontra no Norteando: sistema que está em constante evolução para melhor atendê-lo.</p>
+     </div>
+   </div>
+ </div>
+
+ <!-- Container (Services Section) -->
+ <div id="services1" class="container-fluid text-center">
+   <h2>SERVIÇOS</h2>
+   <h4>O que oferecemos:</h4>
+   <br>
+   <div class="row slideanim">
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-off logo-small"></span>
+       <h4>24 HORAS/DIA DE FUNCIONAMENTO NA WEB</h4>
+ 
+     </div>
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-heart logo-small"></span>
+       <h4>RELAÇÃO CONTRATANTE-CONTRATADA</h4>
+   
+     </div>
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-lock logo-small"></span>
+       <h4>EFICÁCIA E EFICIÊNCIA NO TRABALHO</h4>
+    
+     </div>
+   </div>
+   <br><br>
+   <div class="row slideanim">
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-leaf logo-small"></span>
+       <h4>AMBIENTE DE TRABALHO AGRADÁVEL</h4>
+    
+     </div>
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-certificate logo-small"></span>
+       <h4>100% RESPONSIVO</h4>
+    
+     </div>
+     <div class="col-sm-4">
+       <span class="glyphicon glyphicon-wrench logo-small"></span>
+       <h4 style="color:#303030;">REVOLUÇÃO NA SUA FORMA DE GERIR</h4>
+  
+     </div>
+   </div>
+ </div>
+
+ <!-- Container (Portfolio Section) -->
+ <div id="portfolio1" class="container-fluid text-center bg-grey">
+   <h2>Setores</h2><br>
+   <h4>O que cada um faz no Norteando:</h4>
+   <div class="row text-center slideanim">
+     <div class="col-sm-4">
+       <div class="thumbnail">
+         <!-- Trocar minha foto, ta mostrando minha familia toda poha, q isso kkkkkkkkkkkkkkkkkkkkkkkkkk, obg -->
+         <img src="junior.png" alt="Paris" width="400" height="300">
+         <p><strong>Janismar Junior</strong></p>
+         <p>Desenvolvedor Back End</p>
+       </div>
+     </div>
+     <div class="col-sm-4">
+       <div class="thumbnail">
+         <img src="wilu.png" alt="New York" width="400" height="300">
+         <p><strong>Willyan Rodrigues</strong></p>
+         <p>Diretor de Operações</p>
+       </div>
+     </div>
+     <div class="col-sm-4">
+       <div class="thumbnail">
+         <img src="pedro.png" alt="San Francisco" width="400" height="300">
+         <p><strong>Pedro Albuquerque</strong></p>
+         <p>Desenvolvedor Front End </p>
+       </div>
+     </div>
+   </div><br>
+
+   <h2>O que acham do sistema?</h2>
+   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+     <!-- Indicators -->
+     <ol class="carousel-indicators">
+       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+       <li data-target="#myCarousel" data-slide-to="1"></li>
+       <li data-target="#myCarousel" data-slide-to="2"></li>
+     </ol>
+
+     <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+       <div class="item active">
+         <h4>"Depois do Norteando, nunca mais tive problema com papelada!"<br><span>Sérgio Souza, Expresso Batista.</span></h4>
+       </div>
+       <div class="item">
+         <h4>"Se o caixa não fecha no fim do mês, sabemos exatamente quem ainda está devendo."<br><span>Jonatas Moraes, Moraes-Tur.</span></h4>
+       </div>
+       <div class="item">
+         <h4>"Simples de usar e muito eficaz! Norteando é melhor que muito remédio de dor de cabeça."<br><span>João Augusto, Princesa Tur.</span></h4>
+       </div>
+     </div>
+
+     <!-- Left and right controls -->
+     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+       <span class="sr-only">Anterior</span>
+     </a>
+     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       <span class="sr-only">Próximo</span>
+     </a>
+   </div>
+ </div>
+
+ <!-- Container (Pricing Section) -->
+ <div id="pricing1" class="container-fluid">
+   <div class="text-center">
+     <h2>Licença Mensal</h2>
+     <h4>Faça um teste e comprove: é rápido e fácil!</h4>
+   </div>
+   <div class="row slideanim">
+      <div class="col-sm-2 col-xs-12">  <!-- coluna vazia da esquerda-->
+      </div> 
+      <div class="col-sm-2 col-xs-12">  <!-- coluna vazia da esquerda-->
+      </div> 
+     <div class="col-sm-4 col-xs-12">
+       <div class="panel panel-default text-center">
+         <div class="panel-heading">
+           <h1>VIP</h1>
+         </div>
+         <div class="panel-body">
+           <p>Acesso a todas as funcionalidades do site!</p>
+           <p><strong>100%</strong> Seguro!</p>
+           <p>Acesso <strong>24 horas</strong> por dia.</p>
+           <p><strong>30 primeiros dias GRÁTIS</strong></strong></p>
+           <a href="#contact1"><button class="btn btn-danger">Saiba mais...</button></a>
+           </div>
+         <div class="panel-footer">
+             <h4>VALOR:</h4>
+             <h3><strong>3%</strong> da sua receita</h3>
+           <h4>valor incidido por mês</h4>
+           <a href="login.html?op=assine"><button class="btn btn-lg">Assine já!</button></a>
+         </div>
+      
+       </div>   
+      </div>
+      <div class="col-sm-2 col-xs-12">   <!-- coluna vazia da direita-->
+      </div>
+      <div class="col-sm-2 col-xs-12">  <!-- coluna vazia da direita-->
+      </div> 
+   </div>
+ </div>
+
+ <!-- Container (Contact Section) -->
+
+ <div id="contact1" class="container-fluid bg-grey">
+   <h2 class="text-center">CONTATO</h2>
+   <div class="row">
+     <div class="col-sm-5">
+       <p>Entre em contato conosco! Retornaremos contato em, no máximo, 48 horas.</p>
+       <p><span class="glyphicon glyphicon-map-marker"></span> Cacoal, RO</p>
+       <p><span class="glyphicon glyphicon-phone"></span> +55 (69) 9 9263-3108</p>
+       <p><span class="glyphicon glyphicon-envelope"></span> adm.norteando@gmail.com</p>
+     </div>
+     <div class="col-sm-7 slideanim">
+       <div class="row">
+         <div class="col-sm-6 form-group">
+           <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+         </div>
+         <div class="col-sm-6 form-group">
+           <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required>
+         </div>
+       </div>
+       <textarea class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea><br>
+       <div class="row">
+         <div class="col-sm-12 form-group">
+           <button class="btn btn-default pull-right" type="submit">Enviar</button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Container (Contact Section) -->
+
+ <div id="login1" class="container-fluid bg-grey">
+    
+ </div>
+
+ <!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+ <footer>
+ </footer>
+
+ <script>
+   $(document).ready(function(){
+     // Add smooth scrolling to all links in navbar + footer link
+     $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+         // Prevent default anchor click behavior
+         event.preventDefault();
+
+         // Store hash
+         var hash = this.hash;
+
+         // Using jQuery's animate() method to add smooth page scroll
+         // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 900, function(){
+
+           // Add hash (#) to URL when done scrolling (default click behavior)
+           window.location.hash = hash;
+         });
+       } // End if
+     });
+
+     $(window).scroll(function() {
+       $(".slideanim").each(function(){
+         var pos = $(this).offset().top;
+
+         var winTop = $(window).scrollTop();
+         if (pos < winTop + 600) {
+           $(this).addClass("slide");
+         }
+       });
+     });
+   })
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
