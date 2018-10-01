@@ -73,6 +73,7 @@
        </nav>
 
        
+    
 
    <!-- Bootstrap core JavaScript
    ================================================== -->
@@ -120,5 +121,22 @@
      });
    </script>
  </body>
+
+<canvas class="line-chart"></canvas>
+<script src="https://cdnks.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script> 
+  var ctx = document.getElementByClassName("line-chart");
+var chartGraph = new Chart (ctx, {
+  type: 'line', 
+  data: {
+    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+    datasets: [{
+      label: "Taxa de Cliques",
+      data: [5,10,5,14,20,15],
+      
+    }]
+  }
+})
+</script>
 </html>
  
