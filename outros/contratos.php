@@ -22,7 +22,7 @@
 
  <body>
    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="site_nort.html">Norteando - Versão Gestor</a>
+     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Norteando</a>
      <ul class="navbar-nav px-3">
        <li class="nav-item text-nowrap">
          <a class="nav-link" href="#">Saída</a>
@@ -36,44 +36,112 @@
          <div class="sidebar-sticky">
            <ul class="nav flex-column">
             <br><br> <li class="nav-item">
-               <a class="nav-link active" href="site_nort.html">
+               <a class="nav-link active" href="#">
                  <span data-feather="home"></span>
                 <span class="sr-only">(current)</span>
-               Página Inicial
+               Página Principal
             </a>
              </li>
       
              <li class="nav-item">
-               <a class="nav-link" href="cad.html">
-                 <span data-feather="dollar-sign"></span>
-                 Controle de Pagamentos
+               <a class="nav-link" href="#">
+                 <span data-feather="users"></span>
+                 Lista de Funcionários
                </a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="grafico.html">
+               <a class="nav-link" href="#">
                  <span data-feather="bar-chart-2"></span>
                  Gráficos Monetários
                </a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="control.html">
+               <a class="nav-link" href="#">
                  <span data-feather="layers"></span>
                  Controle dos Contratos
                </a>
              </li>
-             <li class="nav-item">
-              <a class="nav-link" href="linhas.html">
-                <span data-feather="settings"></span>
-                Linhas
-              </a>
-            </li>
            </ul>
            </ul>
          </div>
        </nav>
 
-       
 
+
+
+<?php 
+
+require_once("_con.php");
+
+
+
+$connect = mysqli_connect($host,$user,$pass,$db);
+if($connect)
+{
+    echo "conectou";
+}
+else{
+    echo "nao abriu o banco";
+}
+
+
+$sql = "SELECT cod_contrato,data_inicio,data_termino,valor_contrato FROM contrato";
+
+
+
+
+$consulta = mysqli_query($connect,$sql);
+
+
+
+echo "<br><br>dunha";
+
+echo '<table> ';
+
+
+echo '<tr>';
+
+
+echo '<td>cod_contrato</td>';
+
+echo '<td>data_inicio</td>';
+
+echo '<td>data_termino</td>';
+
+echo '<td>valor_contrato</td>';
+
+echo '</tr>';
+
+// Armazena os dados da consulta em um array associativo
+
+while($registro = mysqli_fetch_assoc($consulta)){
+
+echo '<tr>';
+
+echo '<td>'.$registro["cod_contrato"].'</td>';
+
+echo '<td>'.$registro["data_inicio"].'</td>';
+
+echo '<td>'.$registro["data_termino"].'</td>';
+
+echo '<td>'.$registro["valor_contrato"].'</td>';
+
+echo '</tr>';
+
+}
+
+echo '</table>';
+
+
+?>
+
+
+
+
+
+
+
+    
    <!-- Bootstrap core JavaScript
    ================================================== -->
    <!-- Placed at the end of the document so the pages load faster -->
