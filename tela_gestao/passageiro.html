@@ -43,7 +43,7 @@
             </a>
             </li>
                    <li class="nav-item">
-              <a class="nav-link" href="meu_pag.html">
+              <a class="nav-link" href="passageiro.html">
                 <span data-feather="dollar-sign"></span>
                 Meus Pagamentos
               </a>
@@ -53,7 +53,8 @@
          </div>
        </nav>
 
-       
+       <span style="text-align: center; margin-top: 50px; margin-left: 40px;"> <h1>Meus Pagamentos <br><br><br><br>  </h1></span>    
+       <canvas id="card" style="max-height: 5px; max-width: 5px; margin-top: 250px; margin-left: 0px; margin-right: 0px"></canvas> 
 <div class="card"> <br><br>
   <div class="card-body">
     <div id="table" class="table-editable">
@@ -64,72 +65,38 @@
                 <th class="text-center">Rota</th>
                 <th class="text-center">Empresa</th>
                 <th class="text-center">Cidade</th>
+                <th class="text-center">Mês</th>
                 <th class="text-center">Data de Pagamento</th>
-                <th class="text-center">Valor</th>
+                <th class="text-center">Valor (R$)</th>
                 <th class="text-center">Situação</th>
             </tr>
             <tr>
-                <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-                <td class="pt-3-half" contenteditable="true">30</td>
-                <td class="pt-3-half" contenteditable="true">Deepends</td>
-                <td class="pt-3-half" contenteditable="true">Spain</td>
-                <td class="pt-3-half" contenteditable="true">Madrid</td>
+                <td class="pt-3-half" contenteditable="true">Luiz Aguiar Lula da Silva</td>
+                <td class="pt-3-half" contenteditable="true">IFRO</td>
+                <td class="pt-3-half" contenteditable="true">Expresso Batista</td>
+                <td class="pt-3-half" contenteditable="true">Cacoal</td>
+                <td class="pt-3-half" contenteditable="true">Janeiro</td>
+                <td class="pt-3-half" contenteditable="true">09/02/2018</td>
+                <td class="pt-3-half" contenteditable="true">140</td>
                 <td class="pt-3-half">
-                    <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
-                    <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
-                </td>
-                <td>
-                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Pago!</button></span>
+                      <span class="label red"><button type="button" style="background-color:#CD3333; border-block-end-color: #CD3333; color: white">Inadimplente!</button></span>
                 </td>
             </tr>
             <!-- This is our clonable table line -->
             <tr>
-                <td class="pt-3-half" contenteditable="true">Guerra Cortez</td>
-                <td class="pt-3-half" contenteditable="true">45</td>
-                <td class="pt-3-half" contenteditable="true">Insectus</td>
-                <td class="pt-3-half" contenteditable="true">USA</td>
-                <td class="pt-3-half" contenteditable="true">San Francisco</td>
-                <td class="pt-3-half">
-                    <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
-                    <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
-                </td>
-                <td>
-                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+              <td class="pt-3-half" contenteditable="true">Luiz Aguiar Lula da Silva</td>
+              <td class="pt-3-half" contenteditable="true">IFRO</td>
+              <td class="pt-3-half" contenteditable="true">Expresso Batista</td>
+              <td class="pt-3-half" contenteditable="true">Cacoal</td>
+              <td class="pt-3-half" contenteditable="true">Fevereiro</td>
+              <td class="pt-3-half" contenteditable="true">09/03/2018</td>
+              <td class="pt-3-half" contenteditable="true">140</td>
+              <td class="pt-3-half">
+                     <span class="label green"><button type="button" style="background-color:#3CB371; border-block-end-color: #3CB371; color: white">Pago!</button></span>
                 </td>
             </tr>
             <!-- This is our clonable table line -->
-            <tr>
-                <td class="pt-3-half" contenteditable="true">Guadalupe House</td>
-                <td class="pt-3-half" contenteditable="true">26</td>
-                <td class="pt-3-half" contenteditable="true">Isotronic</td>
-                <td class="pt-3-half" contenteditable="true">Germany</td>
-                <td class="pt-3-half" contenteditable="true">Frankfurt am Main</td>
-                <td class="pt-3-half">
-                    <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
-                    <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
-                </td>
-                <td>
-                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                </td>
-            </tr>
-            <!-- This is our clonable table line -->
-            <tr class="hide">
-                <td class="pt-3-half" contenteditable="true">Elisa Gallagher</td>
-                <td class="pt-3-half" contenteditable="true">31</td>
-                <td class="pt-3-half" contenteditable="true">Portica</td>
-                <td class="pt-3-half" contenteditable="true">United Kingdom</td>
-                <td class="pt-3-half" contenteditable="true">London</td>
-                <td class="pt-3-half">
-                    <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
-                    <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Pago!</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
+            </table></div></div></div>
 </div>
 
    <!-- Bootstrap core JavaScript
