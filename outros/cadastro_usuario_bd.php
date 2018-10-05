@@ -45,10 +45,10 @@ $resultado = mysqli_query ($connect, "insert into contratante(cpf_contratante,no
 ,data_nascimento,ddd,telefone_contratante,estado,cidade,rua,bairro,cep,
 num_local,complemento,email_contratante,senha,rg,cod_empresa) 
 
-values('".$cpf_contratante."', '".$nome_contratante."', '".$data_nascimento."'
+values('.$cpf_contratante.', '.$nome_contratante.', '.$data_nascimento.'
 , '".$ddd."','".$telefone_contratante."','".$estado."','".$cidade."',
-'".$rua."', '".$bairro."', '".$cep."', '".$num_local."', '".$complemento."',
- '".$email_contratante."','".$senha."', '".$rg."','".$cod_empresa."')");
+'.$rua.', '.$bairro.', '.$cep.', '.$num_local.', '.$complemento.',
+ '.$email_contratante.','.$senha.', '.$rg.','.$cod_empresa.')");
 
 if($resultado){
 echo "cadastrou com Sucesso" ;
