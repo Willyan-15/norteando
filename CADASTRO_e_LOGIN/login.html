@@ -11,6 +11,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css2.css">
 </head>
+<form method=post action=login_bd.php>
+
+
+
 <body>
 	<br><Br><br><br><br>
         
@@ -21,11 +25,11 @@
 		 <div class="col-sm-12">
 			<div class="row">
 				<div class="col-xs-12">
-					<label class="telefone" >Nome de Usuário</label></div>
+					<label class="telefone" >E-mail</label></div>
 			<br><br>	
 			 
 			    <div class="col-xs-12	">	 
-					 <input type="nomeusuario" name="nomeusuario"  id="nomeusuario"placeholder="Digite um nome para seu Usuário" class="form-control" >
+					 <input type="nomeusuario" name="email"  id="nomeusuario"placeholder="Digite seu e-mail" class="form-control" >
 				</div>
 			
 			</div>
@@ -48,8 +52,9 @@
    
      
 		     <div class="col-sm-12">
-                    <br>
-				 <div class="btn btn-warning">Entrar!</div>
+					<br>
+					<input type=submit class="btn btn-warning" value=Login>
+		    
 				 <a href="tela_transicao.html" Não possui cadastro? Clique aqui!></a>
 		   </div>
 		   <a href="tela_transicao.html">Não possui cadastro? Acesse aqui!</a>
