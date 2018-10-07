@@ -13,20 +13,20 @@ body{
 /*-----for border----*/
 .container{
    font-family:Roboto,sans-serif;
-     background-image:url(fundoazul.jpg) ;
+     background-image:url(fundoazul.jpg ) ;
    
     border-style: 1px solid grey;
     margin: 0 auto;
     text-align: center;
     opacity: 0.8;
-    margin-top: 67px;
+    margin-top: 50px;
   box-shadow: 2px 5px 5px 0px #eee;
-    max-width: 80px;
+    max-width: 10px;
     padding-top: 0px;
     height: 800px;
-    margin-top: 166px;
 }
 /*--- for label of first and last name---*/
+
 .telefone{
     margin-left: 1px;
     font-family: sans-serif;
