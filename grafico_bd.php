@@ -85,7 +85,7 @@ else if($registro['cod_contrato'] == 2)
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Sua mãe', 'Hours per Day'],
+          ['Não', 'Sei'],
           ['Contratos pagos', <?php echo $cont_pagos;?> ],
           ['Contratos em debito', <?php echo $cont_n_pagos;?>]
          
