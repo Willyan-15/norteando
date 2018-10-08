@@ -18,7 +18,7 @@
 <form method=post action=cadastro_empresa_bd.php>
 
 <body>
- <div class="container" style="width:1000px; padding-top: 0px; height: 728px">
+ <div class="container" style="width:1000px; padding-top: 0px; height: 700px">
  <!---heading---->
      <header class="heading"> Registro de Empresa</header><hr></hr>
 	<!---Form starting----> 
@@ -29,7 +29,7 @@
 			     <div class="col-xs-4">
           	         <label class="telefone">Razão Social :</label> </div>
 		         <div class="col-xs-8">
-		             <input type="text" name="razaosocial" id="razaosocial" placeholder="Digite a Razão Social da Empresa" class="form-control" style="max-height: 25px; margin-top: 5px">
+		             <input type="text" name="razaosocial" id="razaosocial" placeholder="Digite a razão social da empresa!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
              </div>
 		      </div>
 		 </div>
@@ -40,7 +40,7 @@
 			     <div class="col-xs-4">
                      <label class="telefone">Nome Fantasia :</label></div>
 				<div class ="col-xs-8">	 
-		             <input type="text" name="nomefantasia" id="nomefantasia" placeholder="Digite o Nome Fantasia da Empresa" class="form-control" style="max-height: 25px; margin-top: 5px">
+		             <input type="text" name="nomefantasia" id="nomefantasia" placeholder="Digite o nome fantasia da empresa!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
                 </div>
 		     </div>
 		 </div>
@@ -50,7 +50,7 @@
 				<div class="col-xs-4">
 					<label class="telefone">CNPJ :</label></div>
 			   <div class ="col-xs-8">	 
-					<input type="text" name="cnpj" id="" placeholder="Digite o CNPJ da Empresa" class="form-control" style="max-height: 25px; margin-top: 5px">
+					<input type="text" name="cnpj" id="" placeholder="Digite o CNPJ da empresa!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 			   </div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Telefone :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="telefone" name="fone"  id="telefone"placeholder="Digite o Telefone" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="telefone" name="fone"  id="telefone"placeholder="Digite o telefone da empresa!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 			<div class="col-xs-4">
 				<label class="telefone" >Informações :</label></div>
 			<div class="col-xs-8"	>	 
-				 <input type="telefone" name="informacoes"  id="telefone"placeholder="Digite informações de sua empresa" class="form-control" cols="40" rows="5" style="height: 100px; margin-top: 5px" wrap="hard" >
+				 <input type="telefone" name="informacoes"  id="telefone"placeholder="Digite informações adicionais da empresa!" class="form-control" cols="40" rows="5" style="height: 100px; margin-top: 5px; text-align: center" wrap="hard" >
 			</div>
 		</div>
 	</div>
@@ -81,22 +81,13 @@
 
 
      <!-----For email---->
-		 <div class="col-sm-12">
-		     <div class="row">
-			     <div class="col-xs-4">
-		             <label class="telefone" >Email :</label></div>
-			     <div class="col-xs-8"	>	 
-			          <input type="email" name="email"  id="email"placeholder="Digite o email" class="form-control" style="max-height: 25px; margin-top: 5px">
-		         </div>
-		     </div>
-		 </div>
-		 <!-----For email---->
+	 <!-----For email---->
 		 <div class="col-sm-12">
 			<div class="row">
 				<div class="col-xs-4">
 					<label class="telefone" >CEP :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="cep" name="cep"  id="cep"placeholder="Digite o CEP" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="cep" name="cep"  id="cep"placeholder="Digite o CEP da empresa!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -146,7 +137,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Cidade :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="cidade" name="cidade"  id="cidade"placeholder="Digite o nome da Cidade" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="cidade" name="cidade"  id="cidade"placeholder="Digite o nome da cidade!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -156,7 +147,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Bairro :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="bairro" name="bairro"  id="bairro"placeholder="Digite o Bairro" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="bairro" name="bairro"  id="bairro"placeholder="Digite o bairro onde se localiza!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -166,7 +157,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Rua :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="rua" name="rua"  id="rua"placeholder="Digite a Rua" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="rua" name="rua"  id="rua"placeholder="Digite a rua onde se localiza!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -176,7 +167,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Número do Local :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="numero" name="num_local"  id="numero"placeholder="Digite o Número" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="numero" name="num_local"  id="numero"placeholder="Digite o número de onde se localiza!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -186,7 +177,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >Complemento :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="complemento" name="complemento"  id="complemento"placeholder="Digite o Complemento se tiver" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="complemento" name="complemento"  id="complemento"placeholder="Digite um complemento, caso tenha!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -196,7 +187,7 @@
 				<div class="col-xs-4">
 					<label class="telefone" >E-mail :</label></div>
 				<div class="col-xs-8"	>	 
-					 <input type="nomeusuraio" name="email"  id="nomeusuario" placeholder="Digite o E-mail da empresa" class="form-control" style="max-height: 25px; margin-top: 5px">
+					 <input type="nomeusuraio" name="email"  id="nomeusuario" placeholder="Digite o e-mail empresarial!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 				</div>
 			</div>
 		</div>
@@ -206,7 +197,7 @@
 				<div class="col-xs-4">
 					  <label class="telefone">Senha :</label></div>
 			 <div class="col-xs-8">
-					<input type="senha" name="senha" id="senha" placeholder="Digite sua senha" class="form-control" style="max-height: 25px; margin-top: 5px">
+					<input type="password" name="senha" id="senha" placeholder="Digite sua senha!" class="form-control" style="max-height: 25px; margin-top: 5px; text-align: center">
 			</div>
 	 </div>
 	 </div>
