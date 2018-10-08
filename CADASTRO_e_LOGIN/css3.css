@@ -21,9 +21,9 @@ body{
     opacity: 0.8;
     margin-top: 50px;
   box-shadow: 2px 5px 5px 0px #eee;
-    max-width: 10px;
+    max-width: 500px;
     padding-top: 0px;
-    height: 800px;
+    height: 1000px;
 }
 /*--- for label of first and last name---*/
 
