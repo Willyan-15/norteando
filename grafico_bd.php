@@ -28,7 +28,7 @@ $cont_n_pagos = 0;
 
 
 
-echo '<table> ';
+echo '<table border="3px"> ';
 
 
 echo '<tr>';
@@ -51,28 +51,32 @@ while($registro = mysqli_fetch_assoc($consulta)){
 echo '<tr>';
 
 echo '<td>' .$registro['cod_contrato']. '</td>';
-echo ' ';
+
 echo '<td>' .$registro['data_inicio']. '</td>';
 echo ' ';
 echo '<td>' .$registro['data_termino']. '</td>';
 echo ' ';
 echo '<td>' .$registro['valor_contrato']. '</td>';
-echo ' ';
+
 echo '</tr>';
 
 
 
-echo '</table>';
 
 if($registro['cod_contrato'] == 1  )
 
     $cont_pagos++;
 
 
-else if($registro['cod_contrato'] == 2)
+else if($registro['cod_contrato'] == 0)
 
     $cont_n_pagos++;
 }
+
+
+echo '</table>';
+
+
 ?>
 
 <html>
