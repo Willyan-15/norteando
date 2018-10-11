@@ -33,10 +33,10 @@ require_once("_con.php");
 $connect = mysqli_connect($host,$user,$pass,$db);
 if($connect)
 {
-    echo "conectou";
+    echo " conectou";
 }
 else{
-    echo "nao abriu o banco";
+    echo " nao abriu o banco";
 }
 //mysql_connect($host,$user,$pass) or die ("Banco de Dados Morreu");
 //mysqli_select_db($connect,$db) or die ("Db não selecionada");
@@ -45,15 +45,15 @@ $resultado = mysqli_query ($connect, "insert into contratante(cpf_contratante,no
 ,data_nascimento,ddd,telefone_contratante,estado,cidade,rua,bairro,cep,
 num_local,complemento,email_contratante,senha,rg,cod_empresa) 
 
-values('.$cpf_contratante.', '.$nome_contratante.', '.$data_nascimento.'
-, '".$ddd."','".$telefone_contratante."','".$estado."','".$cidade."',
-'.$rua.', '.$bairro.', '.$cep.', '.$num_local.', '.$complemento.',
- '.$email_contratante.','.$senha.', '.$rg.','.$cod_empresa.')");
+values('".$cpf_contratante."', '".$nome_contratante."', ".$data_nascimento."
+, ".$ddd.",'".$telefone_contratante."','".$estado."','".$cidade."',
+'".$rua."', '".$bairro."', '".$cep."', ".$num_local.", '".$complemento."',
+ '".$email_contratante."','".$senha."', '".$rg."',".$cod_empresa.")");
 
 if($resultado){
-echo "cadastrou com Sucesso" ;
+echo " cadastrou com Sucesso" ;
 }
 else{
-    echo "erro no cadastro";
+    echo " erro no cadastro";
 }
 ?>
