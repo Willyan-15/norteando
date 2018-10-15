@@ -14,14 +14,13 @@ else{
 }
 
 
-$sql = "SELECT cod_contrato,data_inicio,data_termino,valor_contrato FROM contrato";
+$sql = 'SELECT cod_contrato,data_inicio,prox_pag FROM contrato';
 
 
 
 
 
 
-$consulta = mysqli_query($connect,$sql);
 
 $cont_pagos = 0;
 $cont_n_pagos = 0;
@@ -38,13 +37,15 @@ echo '<td> cod_contrato </td>';
 
 echo '<td> data_inicio </td>';
 
-echo '<td> data_termino </td>';
+echo '<td> prox_pag </td>';
 
-echo '<td> valor_contrato </td>';
 
 echo '</tr>';
 
 // Armazena os dados da consulta em um array associativo
+
+$consulta = mysqli_query($connect,$sql);
+
 
 while($registro = mysqli_fetch_assoc($consulta)){
 
@@ -54,9 +55,8 @@ echo '<td>' .$registro['cod_contrato']. '</td>';
 
 echo '<td>' .$registro['data_inicio']. '</td>';
 echo ' ';
-echo '<td>' .$registro['data_termino']. '</td>';
-echo ' ';
-echo '<td>' .$registro['valor_contrato']. '</td>';
+echo '<td>' .$registro['prox_pag']. '</td>';
+
 
 echo '</tr>';
 
@@ -68,7 +68,7 @@ if($registro['cod_contrato'] == 1  )
     $cont_pagos++;
 
 
-else if($registro['cod_contrato'] == 0)
+else if($registro['cod_contrato'] == 2)
 
     $cont_n_pagos++;
 }
