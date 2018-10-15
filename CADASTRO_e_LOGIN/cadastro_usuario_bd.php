@@ -5,7 +5,7 @@
     $nome_contratante = $_POST['nome_contratante'];
     $data_nascimento = $_POST['data_nascimento'];
     $ddd = $_POST['ddd'];
-    $telefone_contratante = $_POST['telefone_contratante'];
+    $telefone_cont = $_POST['telefone_cont'];
 
 $estado = $_POST['estado'];
 $cidade= $_POST['cidade']; 
@@ -41,14 +41,21 @@ else{
 //mysql_connect($host,$user,$pass) or die ("Banco de Dados Morreu");
 //mysqli_select_db($connect,$db) or die ("Db não selecionada");
 
-$resultado = mysqli_query ($connect, "insert into contratante(cpf_contratante,nome_contratante
-,data_nascimento,ddd,telefone_contratante,estado,cidade,rua,bairro,cep,
+
+$comando = "insert into contratante(cpf_contratante,nome_contratante
+,data_nascimento,ddd,telefone_cont,estado,cidade,rua,bairro,cep,
 num_local,complemento,email_contratante,senha,rg,cod_empresa) 
 
 values('".$cpf_contratante."', '".$nome_contratante."', ".$data_nascimento."
-, ".$ddd.",'".$telefone_contratante."','".$estado."','".$cidade."',
-'".$rua."', '".$bairro."', '".$cep."', ".$num_local.", '".$complemento."',
- '".$email_contratante."','".$senha."', '".$rg."',".$cod_empresa.")");
+, ".$ddd.",'".$telefone_cont."','".$estado."','".$cidade."',
+'".$rua."', '".$bairro."', '".$cep."',".$num_local.", '".$complemento."',
+ '".$email_contratante."','".$senha."', '".$rg."','".$cod_empresa."')";
+
+
+
+ echo $comando;
+
+$resultado = mysqli_query ($connect, $comando);
 
 if($resultado){
 echo " cadastrou com Sucesso" ;
