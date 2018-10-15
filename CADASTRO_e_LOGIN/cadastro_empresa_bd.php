@@ -35,7 +35,7 @@ else{
 
 $comando =  "insert into empresa(razao_social,nome_fantasia,cnpj,ddd,
 
-telefone, informacoes,rua,bairro,cep,num_local,complemento,estado,cidade,email,senha) 
+telefone, informacoes,cep,estado,cidade,bairro,rua,num_local,complemento,email,senha) 
 
 values('".$razao_social."', '".$nome_fantasia."','".$cnpj."',
 '".$ddd."',  '".$telefone."',
