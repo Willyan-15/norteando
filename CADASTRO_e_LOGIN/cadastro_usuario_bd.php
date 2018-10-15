@@ -52,9 +52,6 @@ values('".$cpf_contratante."', '".$nome_contratante."', ".$data_nascimento."
  '".$email_contratante."','".$senha."', '".$rg."','".$cod_empresa."')";
 
 
-
- echo $comando;
-
 $resultado = mysqli_query ($connect, $comando);
 
 if($resultado){
