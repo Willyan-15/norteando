@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 
 require_once("_con.php");
 
@@ -7,60 +8,57 @@ require_once("_con.php");
 $connect = mysqli_connect($host,$user,$pass,$db);
 if($connect)
 {
-    echo "conectou";
+    echo "conectou<br>";
 }
 else{
     echo "nao abriu o banco";
 }
 
 
-$sql = "SELECT cod_contrato,data_inicio,data_termino,valor_contrato FROM contrato";
+$sql = 'SELECT c.nome_contratante FROM contratante c INNER JOIN contrato p ON c.cod_contratante = p.cod_passageiro';
 
 
 
 
 $consulta = mysqli_query($connect,$sql);
 
+if ($consulta){
+    echo"deu certo <br>";
+}
+else{
+    echo "deu errado";
+}
 
-
-echo "<br><br>dunha";
-
-echo '<table> ';
+echo '<table border="3px"> ';
 
 
 echo '<tr>';
 
 
-echo '<td>cod_contrato</td>';
+echo '<td> NOME </td>';
 
-echo '<td>data_inicio</td>';
 
-echo '<td>data_termino</td>';
-
-echo '<td>valor_contrato</td>';
 
 echo '</tr>';
-
-// Armazena os dados da consulta em um array associativo
 
 while($registro = mysqli_fetch_assoc($consulta)){
 
-echo '<tr>';
+    echo '<tr>';
 
-echo '<td>'.$registro["cod_contrato"].'</td>';
+echo '<td>' .$registro['nome_contratante']. '</td>';
 
-echo '<td>'.$registro["data_inicio"].'</td>';
+echo '<td>' .$registro['nome_contratante']. '</td>';
 
-echo '<td>'.$registro["data_termino"].'</td>';
+echo '<td>' .$registro['nome_contratante']. '</td>';
 
-echo '<td>'.$registro["valor_contrato"].'</td>';
 
 echo '</tr>';
+    
+    }
 
-}
 
-echo '</table>';
 
+    
 
 ?>
 
@@ -143,53 +141,7 @@ echo '</table>';
           </div>
        </nav>
 
-       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="bottom: 50px; padding-top: 30px">
-               <br><br><br>
-         <h2 style="text-align: center">Controle dos Contratos</h2><br><br>
-         <div class="table-responsive" style="margin-left: 4%;">
-           <table class="table table-striped table-sm">
-             <thead>
-               <tr style="text-align: center">
-                 <th>Cód. Passageiro</th>
-                 <th>Nome </th>
-                 <th>Rota</th>
-                 
-                  <th>Inicio de Contratação</th>
-                 <th>Tel</th>
-                 <th>CPF</th>
-                 <th>E-mail</th>
-                 
-               </tr>
-             </thead>
-            
-             <tbody>
-                   <tr style="text-align: center">
-                           <td>MO0001</td>
-                           <td>Severino Davi da Rocha</td>
-                           <td>FACIMED</td>
-                           
-                           <td>15/02/2016</td>
-                           <td>(69)3441-9801</td>
-                           <td>14578954367</td>
-                           <td>severino@gmail.com</td>
-                       </tr>
-                       <tr style="text-align: center">
-                        <td>MO0002</td>
-                        <td>Laura Letícia Martins</td>
-                        <td>FACIMED</td>
-                       
-                        <td>15/02/2016</td>
-                        <td>(69)3441-9801</td>
-                        <td>14578954367</td>
-                        <td>severino@gmail.com</td>
-                    </tr>
-                       
-             </tbody>
-           </table>
-         </div>
-       </main>
-     </div>
-   </div></div>
+      
 
    <!-- Bootstrap core JavaScript
    ================================================== -->
