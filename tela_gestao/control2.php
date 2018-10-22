@@ -14,7 +14,11 @@ else{
 }
 
 
-$sql = "SELECT cod_contrato,data_inicio,data_termino,valor_contrato FROM contrato";
+$sql = "SELECT cod_contrato,data_inicio,data_termino,valor_contrato FROM contrato"
+"SELECT c.cod_contratante, c.nome
+FROM contratante c
+INNER JOIN contrato p ON p.cod_contratante = p.cod_passageiro"
+;
 
 
 
@@ -31,13 +35,17 @@ echo '<table> ';
 echo '<tr>';
 
 
-echo '<td>cod_contrato</td>';
+echo '<td>Cód.Passageiro</td>';
 
-echo '<td>data_inicio</td>';
+echo '<td>Nome</td>';
 
-echo '<td>data_termino</td>';
+echo '<td>Rota</td>';
 
-echo '<td>valor_contrato</td>';
+echo '<td>Inicio de Contratação</td>';
+
+echo '<td>Tel</td>';
+
+echo '<td>CPF</td>';
 
 echo '</tr>';
 
