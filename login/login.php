@@ -36,12 +36,12 @@ else{
 
         
 
-            header('Location: http://localhost/norteando-git/norteando/grafico_bd.php');
+            header('Location: http://localhost/norteando-git/norteando/tela_gestao/tela_entrada.html');
         }
      else{
         
 
-            header('Location: http://localhost/norteando-git/norteando/grafico_bd.php');
+            header('');
 
             
         }
