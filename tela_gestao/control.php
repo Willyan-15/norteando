@@ -15,7 +15,9 @@ else{
 }
 
 
-$sql = 'SELECT c.nome_contratante FROM contratante c INNER JOIN contrato p ON c.cod_contratante = p.cod_passageiro';
+$sql = 'SELECT c.nome_contratante,c.cod_contratante,p.data_inicio,p.prox_pag FROM contratante c 
+
+INNER JOIN contrato p ON c.cod_contratante = p.cod_passageiro';
 
 
 
@@ -35,7 +37,14 @@ echo '<table border="3px"> ';
 echo '<tr>';
 
 
-echo '<td> NOME </td>';
+echo '<td> Nome </td>';
+
+echo '<td>cod contrato</td>';
+
+echo '<td>data inicio</td>';
+
+echo '<td>prox pag</td>';
+
 
 
 
@@ -47,9 +56,11 @@ while($registro = mysqli_fetch_assoc($consulta)){
 
 echo '<td>' .$registro['nome_contratante']. '</td>';
 
-echo '<td>' .$registro['nome_contratante']. '</td>';
+echo '<td>' .$registro['cod_contratante']. '</td>';
 
-echo '<td>' .$registro['nome_contratante']. '</td>';
+echo '<td>' .$registro['data_inicio']. '</td>';
+
+echo '<td>' .$registro['prox_pag']. '</td>';
 
 
 echo '</tr>';
