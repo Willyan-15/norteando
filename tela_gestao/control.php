@@ -141,7 +141,7 @@ echo '</tr>';
                </a>
              </li>
              <li class="nav-item">
-              <a class="nav-link" href="linhas.html">
+              <a class="nav-link" href="linhas.php">
                 <span data-feather="settings"></span>
                 Linhas
               </a>
