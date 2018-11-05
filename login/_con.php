@@ -2,6 +2,6 @@
 $host = "localhost";
 $user = "root";
 $pass = "root";
-$db   = "norteando";
+$db   = "norte2";
 
 ?>

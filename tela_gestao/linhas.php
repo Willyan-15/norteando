@@ -98,34 +98,53 @@
         <th class="text-center">Valor</th>
         <th class="text-center">Alterar</th>
         </tr>
-        <tr>
-        <td class="pt-3-half">AAA001</td>
-       <td class="pt-3-half">Expresso Batista</td>
-       <td class="pt-3-half">IFRO</td> 
-       <td class="pt-3-half">Teixerão</td>
-       <td class="pt-3-half">INFRO</td>
-        <td class="pt-3-half">Cacoal</td>
-        <td class="pt-3-half">Lorival</td>
-        <td class="pt-3-half">140</td>
-        <td class="pt-3-half">
-        <span class="table-remove"><button type="button" style="background-color:#3CB371; border-block-end-color: #3CB371; color: white">Altere a Tabela</button></span> 
-        </td>
-        </tr> 
-        <!-- This is our clonable table line -->
-        <tr>
-        <td class="pt-3-half">FMD027</td>
-        <td class="pt-3-half">Expresso Batista</td>
-        <td class="pt-3-half">Rota 040</td>
-        <td class="pt-3-half">Vista Alegre</td>
-        <td class="pt-3-half">FACIMED</td>
-         <td class="pt-3-half">Cacoal</td>
-         <td class="pt-3-half">Aparecido</td>
-        <td class="pt-3-half">250</td>
-        <td class="pt-3-half">
-        <span class="table-remove"><button type="button" style="background-color:#3CB371; border-block-end-color: #3CB371; color: white">Altere a Tabela</button></span> 
-        </td>
-        </tr>
-        
+
+        <?php 
+
+            require_once("../login/_con.php");
+
+            $connect = mysqli_connect($host,$user,$pass,$db);
+
+            if($connect)
+            {
+              $sql = "SELECT id_rota,cod_rota, empresa, nome, saida, destino, cidade, motorista, valor FROM rota_emp;";
+              $result = mysqli_query($connect, $sql);
+
+              if($result != null)
+              {
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                        //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                        
+                        echo "<tr>";
+                        //echo "<td class=\"pt-3-half\">".$row['cod_rota']."</td>";
+                        echo "<td class=\"pt-3-half\">".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['empresa']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['nome']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['saida']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['destino']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['cidade']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['motorista']."</td>";
+                        echo "<td class=\"pt-3-half\">".$row['valor']."</td>";
+                        echo "<td class=\"pt-3-half\"><span class=\"table-remove\"><a href=\"alterrota.php?id=".$row['id_rota']."\"><button type=\"button\" style=\"background-color:#3CB371; border-block-end-color: #3CB371; color: white\">Altere a Tabela</button></a></span> </td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+              }
+              mysqli_close($connect);
+
+            }
+            else{
+              echo "nao abriu o banco";
+            }
+
+
+            
+            ?>
+
         </table>
         </div>
         </div>
