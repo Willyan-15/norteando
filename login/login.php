@@ -1,16 +1,7 @@
 <?php 
-  $login = $_POST['login'];
-  
-  $senha = md5($_POST['senha']);
 
-  
-
-
-
-
-
-
-
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
 
 
   $entrar = $_POST['entrar'];
@@ -36,23 +27,23 @@ else{
 }
     if (isset($entrar)) {
              
-      $verifica = mysqli_query($connect, "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'");
+      $verifica = mysqli_query($connect, "SELECT email_contratante,senha FROM contratante WHERE email_contratante = '$email' AND senha = '$senha'");
 
       $count = mysqli_num_rows($verifica);
       
 
-      if($count == 1){
+     if($count == 1){
 
         
 
-            header('Location: /teste/pagina_inicial.html');
+            header('Location: http://localhost/norteando-git/norteando/tela_gestao/tela_entrada.html');
         }
-        else{
+     else{
         
 
-            header('Location: login_html.html');
+            header('');
 
             
         }
-    }
+   }
 ?>
